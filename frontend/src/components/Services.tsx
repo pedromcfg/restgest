@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Row, Col, Card, Button, Table, Modal, Form, Alert, Badge } from 'react-bootstrap';
+import { Container, Row, Col, Card, Button, Modal, Form, Alert, Badge } from 'react-bootstrap';
 import { Service, Student } from '../types';
 import { servicesAPI, studentsAPI } from '../services/api';
 import QuebrasModal from './QuebrasModal';

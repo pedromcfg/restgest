@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Modal, Form, Button, Row, Col, Alert, Tab, Tabs, Table, Badge } from 'react-bootstrap';
+import { Modal, Form, Button, Alert, Tab, Tabs, Table, Badge } from 'react-bootstrap';
 import { Service, Comida, Bebida, MaterialSala } from '../types';
 import { comidasAPI, bebidasAPI, materialSalaAPI, quebrasAPI } from '../services/api';
 
@@ -117,43 +117,7 @@ const QuebrasModal: React.FC<QuebrasModalProps> = ({
     }
   };
 
-  const getItemName = (type: 'comidas' | 'bebidas' | 'materiais', itemId: string) => {
-    if (type === 'comidas') {
-      const item = comidas.find(i => i._id === itemId);
-      return item ? item.nome : '';
-    } else if (type === 'bebidas') {
-      const item = bebidas.find(i => i._id === itemId);
-      return item ? item.nome : '';
-    } else {
-      const item = materiais.find(i => i._id === itemId);
-      return item ? item.nome : '';
-    }
-  };
-
-  const getItemQuantity = (type: 'comidas' | 'bebidas' | 'materiais', itemId: string) => {
-    if (type === 'comidas') {
-      const item = comidas.find(i => i._id === itemId);
-      return item ? item.quantidade : 0;
-    } else if (type === 'bebidas') {
-      const item = bebidas.find(i => i._id === itemId);
-      return item ? item.quantidade : 0;
-    } else {
-      const item = materiais.find(i => i._id === itemId);
-      return item ? item.quantidade : 0;
-    }
-  };
-
-  const getItemUnit = (type: 'comidas' | 'bebidas' | 'materiais', itemId: string) => {
-    if (type === 'comidas') {
-      const item = comidas.find(i => i._id === itemId);
-      return item ? item.unidade : '';
-    } else if (type === 'bebidas') {
-      const item = bebidas.find(i => i._id === itemId);
-      return item ? item.unidade : '';
-    } else {
-      return 'unidades';
-    }
-  };
+  // Funções auxiliares removidas - não utilizadas no componente atual
 
   const renderItemsTable = (type: 'comidas' | 'bebidas' | 'materiais', items: (Comida | Bebida | MaterialSala)[]) => {
     return (
