@@ -1,17 +1,10 @@
 {
-  "name": "restgest-mongodb",
+  "name": "restgest-api",
   "version": "1.0.0",
-  "description": "Sistema de Gestão de Restauração com MongoDB",
-  "main": "frontend/build/index.html",
-  "scripts": {
-    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
-    "dev:backend": "cd backend && npm run dev",
-    "dev:frontend": "cd frontend && npm start",
-    "build": "cd frontend && npm run build",
-    "start": "cd frontend && npm start"
-  },
+  "description": "RESTGEST API",
+  "main": "api/index.js",
   "dependencies": {
-    "concurrently": "^8.2.2"
-  },
-  "devDependencies": {}
+    "express": "^4.18.2",
+    "cors": "^2.8.5"
+  }
 }
